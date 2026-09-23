@@ -35,7 +35,7 @@ Apify链路：使用者的 Skill → Apify → 返回结果。Apify目前没有�
 node ~/.codex/skills/topyi-remote-search/scripts/remote.mjs status --env /你的私有路径/service.env
 ```
 
-该命令检查连接及服务状态，不启动公司采集。服务默认入口为 `https://topyi.movingcostcheck.com`，供skill调用，不是网页查询表单。管理员统一维护顶易会话；登录失效时联系管理员。
+该命令检查连接及服务状态，不启动公司采集。服务默认入口为 `https://topyi.movingcostcheck.com`，供skill调用，不是网页查询表单。管理员统一维护顶易会话；登录失效时联系管理员。共享服务不设每日查询额度，所有人统一排队、一次执行一个任务，上游请求间隔至少1秒；每个凭证每分钟最多提交6个新任务。
 
 **Apify：**按 [配置示例](skills/apify-linkedin-contacts/examples/credentials.env.example) 保存自己的 `APIFY_API_TOKEN`；启动前检查采集器当前价格并设定费用上限。没有配置Apify时，顶易查询仍可独立使用。
 
