@@ -1,4 +1,4 @@
 interface:
   display_name: "顶易共享查询（无需顶易登录）"
-  short_description: "使用管理员分配的访问凭证，查询公司与商务联系人并补充调研报告"
-  default_prompt: "使用 $topyi-remote-search 查询报告里的公司，按优先级补充有来源的商务邮箱。"
+  short_description: "使用个人服务凭证查询公司、交易及商务联系人，保留匹配依据和来源"
+  default_prompt: "使用 $topyi-remote-search 按我的查询条件获取公司、交易或联系人资料，并说明来源与未核对事项。"

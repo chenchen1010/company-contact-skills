@@ -21,14 +21,14 @@ API 的 Actor ID 使用 `harvestapi~linkedin-company-employees` 和 `harvestapi~
 - POST `/acts/{actor}/runs?maxTotalChargeUsd=...&timeout=300&restartOnError=false` 启动。脚本先独占创建 state.json；目录重复会拒绝，避免重复计费。
 - GET `/actor-runs/{runId}` 收取状态；GET `/datasets/{datasetId}/items` 每页500，保留错误行并校验总数。状态未完成就不报告最终结果。
 - START_UNCERTAIN 是提交结果不明，不是“没有运行”。通过控制台核实后 attach；若不能关联，保留原状态及原因，不批量重启。
-- 失败任务也可能收费。费用以 API 返回及控制台为准，未提供费用时保留 null。每次预算上限不等于应用层自动限制整个报告的总预算，需要维护总账。
+- 失败任务也可能收费。费用以 API 返回及控制台为准，未提供费用时保留 null。每次预算上限不等于应用层自动限制整个任务的总预算，需要维护总账。
 - 免费层、账户项目数限制、预算截断、站点无资料分别记录；不要靠重复拆分同一任务绕过账户限制。
 
 ## 返回信息与可信度
 
 原始字段可能包括 firstName、lastName、linkedinUrl、currentPosition、experience、emails。邮箱项常含 email、status、catchAllDomain、free，均允许缺失；缺失不按 false 或零处理。
 
-| 原始证据（内部保留） | 给业务用户的说明 |
+| 原始证据（内部保留） | 状态含义说明 |
 |---|---|
 | status=valid 且 catchAllDomain=false | 采集工具判断可用，尚未独立确认能否收件 |
 | catchAllDomain=true | 暂不能确认此邮箱是否真实存在 |
