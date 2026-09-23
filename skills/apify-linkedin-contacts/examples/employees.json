@@ -1,0 +1,17 @@
+{
+  "kind": "employees",
+  "company": "示例，请替换公司和URL",
+  "input": {
+    "companies": [
+      "https://www.linkedin.com/company/example-footwear/"
+    ],
+    "maxItems": 8,
+    "jobTitles": [
+      "Buyer",
+      "Purchasing",
+      "Sourcing",
+      "Product Manager"
+    ],
+    "profileScraperMode": "Full + email search ($12 per 1k)"
+  }
+}

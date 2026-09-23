@@ -1,0 +1,14 @@
+# Private credentials and query outputs
+.env
+.env.*
+*.env
+!*.env.example
+.runtime/
+.private/
+outputs/
+node_modules/
+__pycache__/
+.DS_Store
+*.xlsx
+*.xls
+*.csv

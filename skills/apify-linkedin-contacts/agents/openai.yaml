@@ -1,0 +1,4 @@
+interface:
+  display_name: "Apify 领英联系人补充"
+  short_description: "补充公司采购人员和商务邮箱，保留来源、任职依据及费用记录"
+  default_prompt: "使用 $apify-linkedin-contacts 在已授权预算内补充目标公司的采购联系人和商务邮箱。"

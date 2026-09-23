@@ -1,0 +1,10 @@
+{
+  "kind": "profiles",
+  "company": "示例，请替换人员URL",
+  "input": {
+    "queries": [
+      "https://www.linkedin.com/in/example-buyer/"
+    ],
+    "profileScraperMode": "Profile details + email search ($10 per 1k)"
+  }
+}
